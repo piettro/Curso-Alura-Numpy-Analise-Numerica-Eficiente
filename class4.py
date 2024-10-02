@@ -27,3 +27,6 @@ for i in range(100):
     norm2 = np.append(norm2, np.linalg.norm(prices_moscow-(coef_angulares[i]*X+coef_lin)))
 
 print(norm2)
+
+data = np.column_stack([norm2,coef_angulares])
+np.savetxt('data.csv',data,delimiter=',')
